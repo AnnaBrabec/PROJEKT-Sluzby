@@ -7,10 +7,14 @@ body {
     background-color: #FAFAFA;
     text-align: center;
     font-size: 16px;
-    margin: 0 20px;
-    line-height: 20px;
+    margin: 0 5%;
+    max-width: 100%;
 }
-h1 {
+
+header {
+    width: 100%;
+}
+header h1 {
     color: black;
     font-size: 28px;
     font-weight: 500;
@@ -28,6 +32,10 @@ header h1::after {
 }
 header img {
     margin: 60px 0 40px 0;
+    width: 90%;
+}
+section {
+    width: 100%;
 }
 .buttons {
     list-style-type: none;
@@ -37,9 +45,11 @@ header img {
     flex-direction: column;
 }
 .button {
+    height: 40px;
     border-radius: 20px;
     padding: 10px 30px;
     margin: auto;
+    font-size: 14px;
 }
 .button a {
     text-decoration: none;
@@ -52,7 +62,7 @@ header img {
 .grey {
     background-color: #8B8B8B;
 }
-h2 {
+section h2 {
     color: black;
     font-size: 16px;
     margin-top: 60px;
@@ -80,4 +90,101 @@ h2 {
 }
 .last{
     margin-bottom: 60px;
+}
+@media (min-width: 640px) {
+    header img {
+        margin-bottom: 30px;
+    }
+    header h1 {
+        margin-bottom: 40px;
+    }
+    .buttons {
+        flex-direction: row;
+    }
+    .blue {
+        margin-bottom: 0;
+        margin-right: 2.5%;
+    }
+    .grey {
+        margin-left: 2.5%;
+    }
+    section h2 {
+        margin-top: 80px;
+    }
+    .services {
+        flex-direction: row;
+        margin: 0 10px;
+    }
+    .box {
+        flex-direction: column;
+        min-height: 170px;
+        flex-basis: calc(100%/3-10px);
+        margin: 0 10px;
+    }
+    .box img {
+        margin: 40px auto 20px auto;
+    }
+    .box p {
+        text-align: center;
+        margin: 0 15px 20px 15px;
+    }
+
+}
+@media (min-width: 1100px) {
+    body {
+        max-width: 1040px;
+        margin: 133px 5.5% 0 5.5%;
+    }
+    header {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 80px;
+    }
+    header h1::after {
+        left: 5.5%;
+    }
+    .image {
+        flex-basis: 490px;
+        margin-left: 30px;
+    }
+    header img {
+        max-width: 425px;
+    }
+    .text {
+        text-align: left;
+        flex-basis: 490px;
+        margin-right: 30px;
+    }
+    .text p {
+        margin: 40px 0;
+    }
+    section {
+        display: flex;
+    }
+    .prvni {
+        flex-direction: row-reverse;
+        margin-top: 80px;
+    }
+    .druhy {
+        margin: 80px 0 60px 0;
+    }
+    .sluzby1 {
+        margin-left: 60px;
+        text-align: left;
+    }
+    .sluzby2 {
+        margin-right: 60px;
+        text-align: left;
+    }
+    .boxes {
+        width: 550px;
+    }
+    .box {
+        width: 170px;
+    }
+    .services {
+        margin: 40px 0 0 0;
+    }
+
+
 }
